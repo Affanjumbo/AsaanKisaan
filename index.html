@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -69,7 +69,16 @@
         <div class="mini-card">
           <h3>Demand Pulse</h3>
           <p>Live industry requests turn into localized crop plans and calendar alerts.</p>
-          <div class="sparkline"></div>
+          <div class="sparkline">
+            <span class="bar" style="height: 38%"></span>
+            <span class="bar" style="height: 62%"></span>
+            <span class="bar" style="height: 45%"></span>
+            <span class="bar" style="height: 78%"></span>
+            <span class="bar" style="height: 56%"></span>
+            <span class="bar" style="height: 92%"></span>
+            <span class="bar" style="height: 64%"></span>
+            <span class="bar" style="height: 82%"></span>
+          </div>
         </div>
         <div class="mini-card">
           <h3>Farmer Commitments</h3>
@@ -120,24 +129,43 @@
         <h2>Flow Diagram</h2>
         <p>Simple, clear demand-to-payment flow.</p>
       </div>
-      <div class="flow">
-        <div class="flow-step">Industry uploads demand</div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">Platform converts demand into crop plans</div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">Farmers register and commit land</div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">Inputs aligned (seed, fertilizer, advisory)</div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">Crop cultivation (tracking and alerts)</div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">Harvest confirmation</div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">Direct pickup and logistics</div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">Industry receives crop</div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">Payment released to farmer</div>
+      <div class="flow-chart">
+        <div class="flow-node">
+          <span class="flow-count">1</span>
+          <div class="flow-content">Industry uploads demand</div>
+        </div>
+        <div class="flow-node">
+          <span class="flow-count">2</span>
+          <div class="flow-content">Platform converts demand into crop plans</div>
+        </div>
+        <div class="flow-node">
+          <span class="flow-count">3</span>
+          <div class="flow-content">Farmers register and commit land</div>
+        </div>
+        <div class="flow-node">
+          <span class="flow-count">4</span>
+          <div class="flow-content">Inputs aligned (seed, fertilizer, advisory)</div>
+        </div>
+        <div class="flow-node">
+          <span class="flow-count">5</span>
+          <div class="flow-content">Crop cultivation (tracking and alerts)</div>
+        </div>
+        <div class="flow-node">
+          <span class="flow-count">6</span>
+          <div class="flow-content">Harvest confirmation</div>
+        </div>
+        <div class="flow-node">
+          <span class="flow-count">7</span>
+          <div class="flow-content">Direct pickup and logistics</div>
+        </div>
+        <div class="flow-node">
+          <span class="flow-count">8</span>
+          <div class="flow-content">Industry receives crop</div>
+        </div>
+        <div class="flow-node">
+          <span class="flow-count">9</span>
+          <div class="flow-content">Payment released to farmer</div>
+        </div>
       </div>
     </section>
 
@@ -174,3 +202,4 @@
   <script src="app.js"></script>
 </body>
 </html>
+
