@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inputs & Logistics - Asaan Kisaan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="bg-orbit"></div>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="../index.html">
+        <img src="../assets/images/image_2026-02-10_000337079.png" alt="Asaan Kisaan" />
+        <span>Asaan Kisaan</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="../farmer/index.html">Farmer App</a>
+        <a class="nav-link" href="../industry/index.html">Industry</a>
+        <a class="nav-link active" href="../partners/index.html">Inputs & Logistics</a>
+        <a class="nav-link" href="../admin/index.html">Admin Panel</a>
+      </div>
+      <div class="nav-cta">
+        <span class="pill">Partner Network</span>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Open menu" data-drawer-open>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <div class="drawer-overlay" data-drawer-close></div>
+  <aside class="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <span class="drawer-title">Navigate</span>
+      <button class="drawer-close" type="button" aria-label="Close menu" data-drawer-close>Close</button>
+    </div>
+    <nav class="drawer-links">
+      <a href="../farmer/index.html">Farmer App</a>
+      <a href="../industry/index.html">Industry</a>
+      <a href="../partners/index.html">Inputs & Logistics</a>
+      <a href="../admin/index.html">Admin Panel</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section class="hero container split">
+      <div class="hero-copy">
+        <p class="eyebrow">Input & Logistics Partner Module</p>
+        <h1>Certified inputs, optimized routes, and real-time tracking.</h1>
+        <p class="lead">
+          Input partners list certified products, match allocations to farmer plans, and coordinate pickup routes
+          for industry deliveries.
+        </p>
+        <div class="hero-actions">
+          <button class="btn primary" data-action="scroll" data-target="#inputs" data-message="Opening input catalog.">Upload Inputs</button>
+          <button class="btn ghost" data-action="scroll" data-target="#logistics" data-message="Opening pickup schedule.">Schedule Pickup</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="mini-card">
+          <h3>Inventory Ready</h3>
+          <p>Seed, fertilizer, and pesticide SKUs mapped to crop specs.</p>
+          <div class="pill-row">
+            <span class="pill">Certified Seed</span>
+            <span class="pill">Pesticide Grade A</span>
+          </div>
+        </div>
+        <div class="mini-card">
+          <h3>Route Optimization</h3>
+          <p>Pickup and delivery clustered for minimum time and fuel.</p>
+          <div class="progress">
+            <span style="width: 63%"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="inputs">
+      <div class="section-head">
+        <h2>Complete Feature List</h2>
+        <p>All partner tasks from inputs to logistics execution.</p>
+      </div>
+      <div class="grid feature-grid">
+        <div class="feature">Input product listing (seed, fertilizer, pesticides)</div>
+        <div class="feature">Quality certification tagging</div>
+        <div class="feature">Farmer-wise input allocation</div>
+        <div class="feature">Pickup and delivery scheduling</div>
+        <div class="feature">Route optimization</div>
+        <div class="feature">Live shipment tracking</div>
+      </div>
+    </section>
+
+    <section class="section container" id="logistics">
+      <div class="grid duo">
+        <div class="card">
+          <h3>Allocation Board</h3>
+          <p>Allocate certified inputs based on crop plan and land size.</p>
+          <div class="table">
+            <div class="table-row"><span>Seed - Wheat A</span><span>12 bags</span></div>
+            <div class="table-row"><span>Fertilizer - NPK</span><span>24 bags</span></div>
+            <div class="table-row"><span>Pesticide - Grade A</span><span>6 bottles</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Shipment Tracking</h3>
+          <p>Live tracking for pickup vehicles and delivery checkpoints.</p>
+          <div class="timeline">
+            <div class="timeline-row">Pickup scheduled - 09:30 AM</div>
+            <div class="timeline-row">In transit - Route 3</div>
+            <div class="timeline-row">Delivered - Industry Hub</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <span>Input & Logistics Prototype</span>
+  </footer>
+  <script src="../app.js"></script>
+</body>
+</html>

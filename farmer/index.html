@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Farmer App - Asaan Kisaan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="bg-orbit"></div>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="../index.html">
+        <img src="../assets/images/image_2026-02-10_000337079.png" alt="Asaan Kisaan" />
+        <span>Asaan Kisaan</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link active" href="../farmer/index.html">Farmer App</a>
+        <a class="nav-link" href="../industry/index.html">Industry</a>
+        <a class="nav-link" href="../partners/index.html">Inputs & Logistics</a>
+        <a class="nav-link" href="../admin/index.html">Admin Panel</a>
+      </div>
+      <div class="nav-cta">
+        <span class="pill">Urdu-friendly UI</span>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Open menu" data-drawer-open>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <div class="drawer-overlay" data-drawer-close></div>
+  <aside class="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <span class="drawer-title">Navigate</span>
+      <button class="drawer-close" type="button" aria-label="Close menu" data-drawer-close>Close</button>
+    </div>
+    <nav class="drawer-links">
+      <a href="../farmer/index.html">Farmer App</a>
+      <a href="../industry/index.html">Industry</a>
+      <a href="../partners/index.html">Inputs & Logistics</a>
+      <a href="../admin/index.html">Admin Panel</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section class="hero container split">
+      <div class="hero-copy">
+        <p class="eyebrow">Farmer Mobile App</p>
+        <h1>Plan, commit, cultivate, and get paid with confidence.</h1>
+        <p class="lead">
+          The farmer app turns verified industry demand into personal crop plans, alerts, and guaranteed buyers.
+          Designed for fast onboarding, clear Urdu-friendly workflows, and payments you can trust.
+        </p>
+        <div class="hero-actions">
+          <button class="btn primary" data-action="scroll" data-target="#registration" data-message="Registration started. Complete the form below.">Start Registration</button>
+          <button class="btn ghost" data-action="scroll" data-target="#calendar" data-message="Opening crop calendar.">View Crop Calendar</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="mini-card">
+          <h3>Profile Snapshot</h3>
+          <p>CNIC verified, land size mapped, location synced to demand clusters.</p>
+          <div class="pill-row">
+            <span class="pill">CNIC Verified</span>
+            <span class="pill">3.5 Acres</span>
+          </div>
+        </div>
+        <div class="mini-card">
+          <h3>Crop Plan</h3>
+          <p>Based on latest industry demand, quality specs, and price projections.</p>
+          <div class="progress">
+            <span style="width: 68%"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="features">
+      <div class="section-head">
+        <h2>Complete Feature List</h2>
+        <p>Everything a farmer needs from registration to payment history.</p>
+      </div>
+      <div class="grid feature-grid">
+        <div class="feature">Farmer registration (CNIC, land size, location)</div>
+        <div class="feature">Crop planning based on industry demand</div>
+        <div class="feature">Recommended seeds, fertilizer, and inputs matching industry specs</div>
+        <div class="feature">Crop calendar and alerts (sowing, spray, harvest)</div>
+        <div class="feature">Expected price and profit estimation</div>
+        <div class="feature">Order commitment before sowing</div>
+        <div class="feature">Harvest notification and pickup request</div>
+        <div class="feature">Payment tracking and history</div>
+        <div class="feature">Advisory and expert chat</div>
+        <div class="feature">Urdu-friendly interface</div>
+      </div>
+    </section>
+
+    <section class="section container" id="registration">
+      <div class="grid duo">
+        <div class="card form-card">
+          <h3>Quick Registration</h3>
+          <p>Enter basic details to start verification.</p>
+          <form class="form-grid demo-form" data-message="Registration captured. Verification is in progress.">
+            <input type="text" name="cnic" placeholder="CNIC" required />
+            <input type="text" name="land" placeholder="Land Size (acres)" required />
+            <input type="text" name="location" placeholder="Location" required />
+            <button class="btn primary small" type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Advisory & Expert Chat</h3>
+          <p>Get recommendations in Urdu and connect to agronomy experts.</p>
+          <button class="btn ghost small" data-action="toast" data-message="Expert chat request sent.">Request Expert</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="calendar">
+      <div class="grid duo">
+        <div class="card">
+          <h3>Crop Calendar</h3>
+          <p>Automated reminders for sowing, spray, irrigation, and harvest windows.</p>
+          <div class="timeline">
+            <div class="timeline-row">Week 1 - Land prep</div>
+            <div class="timeline-row">Week 3 - First spray</div>
+            <div class="timeline-row">Week 10 - Harvest window</div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Profit Estimator</h3>
+          <p>See expected price, projected yield, and profit margin before committing land.</p>
+          <div class="stats">
+            <div>
+              <span class="stat-label">Expected Price</span>
+              <span class="stat-value">PKR 4,950 / maund</span>
+            </div>
+            <div>
+              <span class="stat-label">Profit</span>
+              <span class="stat-value">+18.5%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <span>Farmer App Prototype</span>
+  </footer>
+  <script src="../app.js"></script>
+</body>
+</html>

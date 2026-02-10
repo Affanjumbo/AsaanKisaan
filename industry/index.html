@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Industry Dashboard - Asaan Kisaan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="bg-orbit"></div>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="../index.html">
+        <img src="../assets/images/image_2026-02-10_000337079.png" alt="Asaan Kisaan" />
+        <span>Asaan Kisaan</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="../farmer/index.html">Farmer App</a>
+        <a class="nav-link active" href="../industry/index.html">Industry</a>
+        <a class="nav-link" href="../partners/index.html">Inputs & Logistics</a>
+        <a class="nav-link" href="../admin/index.html">Admin Panel</a>
+      </div>
+      <div class="nav-cta">
+        <span class="pill">Demand Control</span>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Open menu" data-drawer-open>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <div class="drawer-overlay" data-drawer-close></div>
+  <aside class="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <span class="drawer-title">Navigate</span>
+      <button class="drawer-close" type="button" aria-label="Close menu" data-drawer-close>Close</button>
+    </div>
+    <nav class="drawer-links">
+      <a href="../farmer/index.html">Farmer App</a>
+      <a href="../industry/index.html">Industry</a>
+      <a href="../partners/index.html">Inputs & Logistics</a>
+      <a href="../admin/index.html">Admin Panel</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section class="hero container split">
+      <div class="hero-copy">
+        <p class="eyebrow">Industry Dashboard</p>
+        <h1>Upload demand, secure quality supply, and track costs in one place.</h1>
+        <p class="lead">
+          Industry buyers define crop types, quality, and delivery schedules. The platform matches verified farmers,
+          tracks compliance, and manages invoices end-to-end.
+        </p>
+        <div class="hero-actions">
+          <button class="btn primary" data-action="scroll" data-target="#demand" data-message="Opening demand upload.">Upload Demand</button>
+          <button class="btn ghost" data-action="scroll" data-target="#matching" data-message="Showing supply matching board.">View Supply Matches</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="mini-card">
+          <h3>Demand Intake</h3>
+          <p>Variety, quality grade, and quantity targets synced to farmer plans.</p>
+          <div class="pill-row">
+            <span class="pill">Variety 1121</span>
+            <span class="pill">Grade A</span>
+          </div>
+        </div>
+        <div class="mini-card">
+          <h3>Procurement Analytics</h3>
+          <p>Compare expected cost vs. contracted commitments in real time.</p>
+          <div class="progress">
+            <span style="width: 54%"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="demand">
+      <div class="section-head">
+        <h2>Complete Feature List</h2>
+        <p>All functions needed by industry procurement teams.</p>
+      </div>
+      <div class="grid feature-grid">
+        <div class="feature">Industry registration and verification</div>
+        <div class="feature">Upload demand (crop type, variety, quality, quantity)</div>
+        <div class="feature">Delivery schedule and location setting</div>
+        <div class="feature">Farmer supply matching dashboard</div>
+        <div class="feature">Quality and compliance tracking</div>
+        <div class="feature">Contract confirmation</div>
+        <div class="feature">Procurement cost analytics</div>
+        <div class="feature">Payment and invoice management</div>
+        <div class="feature">Supply chain traceability report</div>
+      </div>
+    </section>
+
+    <section class="section container" id="matching">
+      <div class="grid duo">
+        <div class="card">
+          <h3>Supply Matching Board</h3>
+          <p>Filter by location, certification, harvest window, and quantity availability.</p>
+          <div class="table">
+            <div class="table-row"><span>Farmer Cluster - South Punjab</span><span>48 tons</span></div>
+            <div class="table-row"><span>Farmer Cluster - Sindh East</span><span>32 tons</span></div>
+            <div class="table-row"><span>Farmer Cluster - Central Punjab</span><span>27 tons</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Compliance Timeline</h3>
+          <p>Quality checks, lab testing, and contract milestones in one timeline.</p>
+          <div class="timeline">
+            <div class="timeline-row">Specs approved - Day 1</div>
+            <div class="timeline-row">Lab test scheduled - Day 20</div>
+            <div class="timeline-row">Delivery window - Day 90</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <span>Industry Dashboard Prototype</span>
+  </footer>
+  <script src="../app.js"></script>
+</body>
+</html>

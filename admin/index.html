@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Panel - Asaan Kisaan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="bg-orbit"></div>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="../index.html">
+        <img src="../assets/images/image_2026-02-10_000337079.png" alt="Asaan Kisaan" />
+        <span>Asaan Kisaan</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="../farmer/index.html">Farmer App</a>
+        <a class="nav-link" href="../industry/index.html">Industry</a>
+        <a class="nav-link" href="../partners/index.html">Inputs & Logistics</a>
+        <a class="nav-link active" href="../admin/index.html">Admin Panel</a>
+      </div>
+      <div class="nav-cta">
+        <span class="pill">Platform Control</span>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Open menu" data-drawer-open>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <div class="drawer-overlay" data-drawer-close></div>
+  <aside class="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <span class="drawer-title">Navigate</span>
+      <button class="drawer-close" type="button" aria-label="Close menu" data-drawer-close>Close</button>
+    </div>
+    <nav class="drawer-links">
+      <a href="../farmer/index.html">Farmer App</a>
+      <a href="../industry/index.html">Industry</a>
+      <a href="../partners/index.html">Inputs & Logistics</a>
+      <a href="../admin/index.html">Admin Panel</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section class="hero container split">
+      <div class="hero-copy">
+        <p class="eyebrow">Admin / Platform Panel</p>
+        <h1>Govern the matching engine, pricing, and partner performance.</h1>
+        <p class="lead">
+          The admin console keeps verification, demand-supply orchestration, logistics, and disputes under one
+          accountable dashboard.
+        </p>
+        <div class="hero-actions">
+          <button class="btn primary" data-action="scroll" data-target="#verification" data-message="Opening verification queue.">Run Verification</button>
+          <button class="btn ghost" data-action="scroll" data-target="#analytics" data-message="Opening analytics.">Open Analytics</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="mini-card">
+          <h3>Matching Engine</h3>
+          <p>Balance industry demand with farmer commitments and logistics capacity.</p>
+          <div class="progress">
+            <span style="width: 71%"></span>
+          </div>
+        </div>
+        <div class="mini-card">
+          <h3>Risk Alerts</h3>
+          <p>Disputes, delays, and quality flags surfaced in real time.</p>
+          <div class="pill-row">
+            <span class="pill">3 Active Disputes</span>
+            <span class="pill">2 Delays</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-head">
+        <h2>Complete Feature List</h2>
+        <p>Full platform governance capabilities.</p>
+      </div>
+      <div class="grid feature-grid">
+        <div class="feature">Farmer and industry verification</div>
+        <div class="feature">Demand-supply matching engine</div>
+        <div class="feature">Price discovery and commission setup</div>
+        <div class="feature">Input partner management</div>
+        <div class="feature">Logistics coordination</div>
+        <div class="feature">Performance analytics and reports</div>
+        <div class="feature">Dispute resolution system</div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-head">
+        <h2>Admin Control Room</h2>
+        <p>Add records, update statuses, filter queues, and simulate matches. Everything works in-browser.</p>
+      </div>
+
+      <div class="panel-grid" id="verification">
+        <div class="panel card">
+          <div class="panel-head">
+            <h3>Verification Queue</h3>
+            <div class="panel-actions">
+              <select id="verificationFilter" class="select">
+                <option value="all">All</option>
+                <option value="pending">Pending</option>
+                <option value="approved">Approved</option>
+                <option value="rejected">Rejected</option>
+              </select>
+              <button id="seedVerification" class="btn ghost small">Seed Sample Data</button>
+            </div>
+          </div>
+          <form id="verificationForm" class="form-grid">
+            <input type="text" name="name" placeholder="Name" required />
+            <select name="type" required>
+              <option value="">Type</option>
+              <option value="Farmer">Farmer</option>
+              <option value="Industry">Industry</option>
+              <option value="Partner">Partner</option>
+            </select>
+            <input type="text" name="location" placeholder="Location" required />
+            <button class="btn primary small" type="submit">Add</button>
+          </form>
+          <div id="verificationTable" class="table"></div>
+        </div>
+
+        <div class="panel card">
+          <div class="panel-head">
+            <h3>Demand-Supply Matching Engine</h3>
+            <button id="runMatch" class="btn primary small">Run Match</button>
+          </div>
+          <div class="panel-body">
+            <div class="chip-row">
+              <span class="chip">Demand: Rice 1121 - 80 tons</span>
+              <span class="chip">Demand: Wheat A - 120 tons</span>
+              <span class="chip">Demand: Cotton - 45 tons</span>
+            </div>
+            <div id="matchResults" class="match-results"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-grid">
+        <div class="panel card">
+          <div class="panel-head">
+            <h3>Price Discovery & Commission</h3>
+            <button id="resetPricing" class="btn ghost small">Reset</button>
+          </div>
+          <form id="pricingForm" class="form-grid">
+            <input type="text" name="crop" placeholder="Crop (e.g., Wheat)" required />
+            <input type="number" name="price" placeholder="Target Price (PKR)" required />
+            <input type="number" name="commission" placeholder="Commission (%)" step="0.1" required />
+            <button class="btn primary small" type="submit">Add</button>
+          </form>
+          <div id="pricingTable" class="table"></div>
+        </div>
+
+        <div class="panel card">
+          <div class="panel-head">
+            <h3>Input Partner Management</h3>
+            <button id="addPartner" class="btn primary small">Add Partner</button>
+          </div>
+          <div id="partnerList" class="table"></div>
+        </div>
+      </div>
+
+      <div class="panel-grid">
+        <div class="panel card">
+          <div class="panel-head">
+            <h3>Logistics Coordination</h3>
+            <button id="addRoute" class="btn ghost small">Add Route</button>
+          </div>
+          <div id="logisticsTable" class="table"></div>
+        </div>
+
+        <div class="panel card">
+          <div class="panel-head">
+            <h3>Dispute Resolution</h3>
+            <select id="disputeFilter" class="select">
+              <option value="all">All</option>
+              <option value="open">Open</option>
+              <option value="resolved">Resolved</option>
+            </select>
+          </div>
+          <div id="disputeTable" class="table"></div>
+        </div>
+      </div>
+
+      <div class="panel-grid" id="analytics">
+        <div class="panel card">
+          <div class="panel-head">
+            <h3>Performance Analytics</h3>
+            <button id="refreshAnalytics" class="btn ghost small">Refresh</button>
+          </div>
+          <div id="analyticsGrid" class="analytics-grid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <span>Admin Panel Prototype</span>
+  </footer>
+  <script src="../app.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
